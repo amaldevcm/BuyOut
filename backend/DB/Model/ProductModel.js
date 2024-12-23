@@ -11,16 +11,26 @@ const productSchema = mongoose.Schema({
         default: null,
         required: false
     },
-    userId: {
-        type: Number,
+    sellerId: {
+        type: String,
         default: null,
         required: true
+    },
+    buyerId: {
+        type: String,
+        default: null,
+        required: false
     },
     price: {
         type: Number,
         default: 0,
         required: true
-    }
+    },
+    isAvailable: {
+        type: Boolean,
+        default: true,
+        required: true
+    },
 
 });
 

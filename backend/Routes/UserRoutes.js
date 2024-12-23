@@ -3,12 +3,6 @@ const db = require('../DB/Model/UserModel');
 const routes = express.Router();
 const moment = require('moment');
 
-// routes.get('/', (req, res) => {
-//     db.find().then(result => {
-//         res.send(result);
-//     }).catch(err => { res.status(404).send("Error in getting users.") });
-// });
-
 routes.get('/', (req, res) => {
     const id = req.query.userId;
     if(id) {
