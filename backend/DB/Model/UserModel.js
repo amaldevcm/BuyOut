@@ -16,6 +16,11 @@ const userSchema = mongoose.Schema({
         default: null,
         required: true
     },
+    role: {
+        type: String,
+        default: 'user',
+        required: false
+    },
     phone: Number,
     zipCode: Number,
     address: {
@@ -26,8 +31,10 @@ const userSchema = mongoose.Schema({
     pincode: {
         type: Number,
         default: null,
-        required: true
+        required: false
     },
+    createdDate: String,
+    updatedDate: String
 });
 
 module.exports = new mongoose.model('User', userSchema);
